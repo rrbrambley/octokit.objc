@@ -104,6 +104,13 @@
 // Returns a signal which will send zero or one OCTContent.
 - (RACSignal *)fetchRepositoryReadme:(OCTRepository *)repository reference:(NSString *)reference;
 
+// Fetches the contributors of a `repository`.
+//
+// repository  - The repository for which the contributors should be fetched.
+//
+// Returns a signal of zero or one OCTContributors.
+- (RACSignal *)fetchRepositoryContributors:(OCTRepository *)repository;
+
 // Fetches a specific repository owned by the given `owner` and named `name`.
 //
 // name  - The name of the repository, must be a non-empty string.
