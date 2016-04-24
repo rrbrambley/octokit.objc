@@ -22,6 +22,7 @@ static NSString *const OCTRepositoryHTMLIssuesPath = @"issues";
 		@"SSHURL": @"ssh_url",
 		@"gitURL": @"git_url",
 		@"HTMLURL": @"html_url",
+		@"contributorsURL": @"contributors_url",
 		@"ownerLogin": @"owner.login",
 		@"ownerAvatarURL": @"owner.avatar_url",
 		@"datePushed": @"pushed_at",
@@ -38,6 +39,10 @@ static NSString *const OCTRepositoryHTMLIssuesPath = @"issues";
 		@"forkSource": @"source",
 		@"textMatches": @"text_matches",
 	}];
+}
+
++ (NSValueTransformer *)contributorsURLJSONTransformer {
+	return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
 + (NSValueTransformer *)HTTPSURLJSONTransformer {
@@ -107,6 +112,7 @@ static NSString *const OCTRepositoryHTMLIssuesPath = @"issues";
 	dictionaryValue[@"HTTPSURL"] = [self.HTTPSURLJSONTransformer transformedValue:externalRepresentation[@"clone_url"]] ?: NSNull.null;
 	dictionaryValue[@"SSHURL"] = externalRepresentation[@"ssh_url"] ?: NSNull.null;
 	dictionaryValue[@"gitURL"] = [self.gitURLJSONTransformer transformedValue:externalRepresentation[@"git_url"]] ?: NSNull.null;
+	dictionaryValue[@"contributorsURL"] = [self.contributorsURLJSONTransformer transformedValue:externalRepresentation[@"contributors_url"]] ?: NSNull.null;
 
 	NSString *HTMLURLString = externalRepresentation[@"html_url"] ?: externalRepresentation[@"url"];
 	dictionaryValue[@"HTMLURL"] = [self.HTMLURLJSONTransformer transformedValue:HTMLURLString] ?: NSNull.null;

@@ -9,6 +9,7 @@
 #import "OCTClient+Repositories.h"
 #import "OCTClient+Private.h"
 #import "OCTContent.h"
+#import "OCTContributor.h"
 #import "OCTOrganization.h"
 #import "OCTRepository.h"
 #import "OCTTeam.h"
@@ -122,6 +123,18 @@
 	NSMutableURLRequest *request = [self requestWithMethod:@"GET" path:path parameters:parameters notMatchingEtag:nil];
 	
 	return [[self enqueueRequest:request resultClass:OCTContent.class] oct_parsedResults];
+}
+
+- (RACSignal *)fetchRepositoryContributors:(OCTRepository *)repository {
+	NSParameterAssert(repository != nil);
+	NSParameterAssert(repository.name.length > 0);
+	NSParameterAssert(repository.ownerLogin.length > 0);
+	
+	NSString *path = [NSString stringWithFormat:@"repos/%@/%@/contributors", repository.ownerLogin, repository.name];
+	
+	NSMutableURLRequest *request = [self requestWithMethod:@"GET" path:path parameters:nil notMatchingEtag:nil];
+	
+	return [[self enqueueRequest:request resultClass:OCTContributor.class] oct_parsedResults];
 }
 
 - (RACSignal *)fetchRepositoryWithName:(NSString *)name owner:(NSString *)owner {
