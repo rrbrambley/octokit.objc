@@ -400,7 +400,7 @@
 		D0E3E8C41835A32100EF530F /* meta.json in Resources */ = {isa = PBXBuildFile; fileRef = D0E3E8C31835A32100EF530F /* meta.json */; };
 		D0E41B8716DFF37E00E321CF /* notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = D0E41B8616DFF37E00E321CF /* notifications.json */; };
 		E226C8041CCD571000D9095C /* OCTContributor.h in Headers */ = {isa = PBXBuildFile; fileRef = E226C8021CCD571000D9095C /* OCTContributor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E226C8051CCD571000D9095C /* OCTContributor.h in Headers */ = {isa = PBXBuildFile; fileRef = E226C8021CCD571000D9095C /* OCTContributor.h */; };
+		E226C8051CCD571000D9095C /* OCTContributor.h in Headers */ = {isa = PBXBuildFile; fileRef = E226C8021CCD571000D9095C /* OCTContributor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E226C8061CCD571000D9095C /* OCTContributor.m in Sources */ = {isa = PBXBuildFile; fileRef = E226C8031CCD571000D9095C /* OCTContributor.m */; };
 		E226C8071CCD571000D9095C /* OCTContributor.m in Sources */ = {isa = PBXBuildFile; fileRef = E226C8031CCD571000D9095C /* OCTContributor.m */; };
 		E226C8081CCD571000D9095C /* OCTContributor.m in Sources */ = {isa = PBXBuildFile; fileRef = E226C8031CCD571000D9095C /* OCTContributor.m */; };
@@ -1357,7 +1357,6 @@
 				D0040D9519FEC6FD002869A6 /* OCTEntity.h in Headers */,
 				C7C557DD1AB6348C00181B7E /* OCTClient+Watching.h in Headers */,
 				D0040D9619FEC6FD002869A6 /* OCTPlan.h in Headers */,
-				E226C8051CCD571000D9095C /* OCTContributor.h in Headers */,
 				D0040D9719FEC6FD002869A6 /* OCTClient+Organizations.h in Headers */,
 				D0040D9819FEC6FD002869A6 /* OCTOrganization.h in Headers */,
 				D0040D9919FEC6FD002869A6 /* OCTTeam.h in Headers */,
@@ -1408,6 +1407,7 @@
 				D0040DC419FEC6FF002869A6 /* NSDateFormatter+OCTFormattingAdditions.h in Headers */,
 				D0040DC519FEC6FF002869A6 /* NSURL+OCTQueryAdditions.h in Headers */,
 				D0040DC619FEC6FF002869A6 /* NSValueTransformer+OCTPredefinedTransformerAdditions.h in Headers */,
+				E226C8051CCD571000D9095C /* OCTContributor.h in Headers */,
 				D0040DC719FEC6FF002869A6 /* RACSignal+OCTClientAdditions.h in Headers */,
 				24D899F01AAAB0DD00BC607C /* OCTClient+Issues.h in Headers */,
 				240BFBD31AFF1BF7006ABC05 /* OCTRepositoriesSearchResult.h in Headers */,
