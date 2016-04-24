@@ -34,6 +34,6 @@
 
 @property (atomic, readonly) BOOL siteAdmin;
 
-@property (atomic, readonly) NSUInteger *contributions;
+@property (atomic, readonly) NSNumber *contributions;
 
 @end
