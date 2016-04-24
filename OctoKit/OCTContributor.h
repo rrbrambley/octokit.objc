@@ -6,7 +6,7 @@
 //  Copyright © 2016 GitHub. All rights reserved.
 //
 
-#import <OctoKit/OctoKit.h>
+#import "OCTEntity.h"
 
 @interface OCTContributor : OCTEntity
 
